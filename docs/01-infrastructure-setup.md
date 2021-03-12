@@ -132,7 +132,7 @@ zone "86.168.192.in-addr.arpa" {
 Forward zone file - define DNS records for forward DNS lookups (DNS name to IP).
 
 ```
---> /etc/bind/zones/db.technoff.eu
+--> /etc/bind/zones/db.brucejacobs.org
 $TTL    604800
 @       IN      SOA     networker.brucejacobs.org. admin.networker.brucejacobs.org. (
                   3       ; Serial
@@ -148,14 +148,14 @@ $TTL    604800
 networker.brucejacobs.org.          IN      A     192.168.86.15
 
 ; 10.98.95.0/24 - A records
-k8s-controller1.technoff.eu.            IN      A      192.168.86.11
-k8s-controller2.technoff.eu.            IN      A      192.168.86.12
-k8s-controller3.technoff.eu.            IN      A      192.168.86.13
-k8s-worker1.technoff.eu.                IN      A      192.168.86.21
-k8s-worker2.technoff.eu.                IN      A      192.168.86.22
-k8s-worker3.technoff.eu.                IN      A      192.168.86.23
-k8s-api.technoff.eu.                    IN      A      192.168.86.18
-media.technoff.eu.                      IN      A      192.168.86.16
+k8s-controller1.brucejacobs.org.            IN      A      192.168.86.11
+k8s-controller2.brucejacobs.org.            IN      A      192.168.86.12
+k8s-controller3.brucejacobs.org.            IN      A      192.168.86.13
+k8s-worker1.brucejacobs.org.                IN      A      192.168.86.21
+k8s-worker2.brucejacobs.org.                IN      A      192.168.86.22
+k8s-worker3.brucejacobs.org.                IN      A      192.168.86.23
+k8s-api.brucejacobs.org.                    IN      A      192.168.86.18
+media.brucejacobs.org.                      IN      A      192.168.86.16
 ```
 
 Reverse zone file - define DNS PTR records for reverse DNS lookups (IP to DNS name).
@@ -173,15 +173,15 @@ $TTL    604800
      IN      NS      networker.brucejacobs.org.
 
 ; PTR Records
-230     IN      PTR     networker.brucejacobs.org.                  ; 192.168.86.15
-11              IN      PTR     k8s-controller1.technoff.eu.    ; 192.168.86.11
-12              IN      PTR     k8s-controller2.technoff.eu.    ; 192.168.86.12
-13              IN      PTR     k8s-controller3.technoff.eu.    ; 192.168.86.13
-21              IN      PTR     k8s-worker1.technoff.eu.        ; 192.168.86.21
-22              IN      PTR     k8s-worker2.technoff.eu.        ; 192.168.86.22
-23              IN      PTR     k8s-worker3.technoff.eu.        ; 192.168.86.23
-18              IN      PTR     k8s-api.technoff.eu.            ; 192.168.86.18
-231             IN      PTR     media.technoff.eu.              ; 192.168.86.16
+15              IN      PTR     networker.brucejacobs.org.          ; 192.168.86.15
+11              IN      PTR     k8s-controller1.brucejacobs.org.    ; 192.168.86.11
+12              IN      PTR     k8s-controller2.brucejacobs.org.    ; 192.168.86.12
+13              IN      PTR     k8s-controller3.brucejacobs.org.    ; 192.168.86.13
+21              IN      PTR     k8s-worker1.brucejacobs.org.        ; 192.168.86.21
+22              IN      PTR     k8s-worker2.brucejacobs.org.        ; 192.168.86.22
+23              IN      PTR     k8s-worker3.brucejacobs.org.        ; 192.168.86.23
+18              IN      PTR     k8s-api.brucejacobs.org.            ; 192.168.86.18
+16              IN      PTR     media.brucejacobs.org.              ; 192.168.86.16
 ```
 
 Start bind9 and enable it at startup.
