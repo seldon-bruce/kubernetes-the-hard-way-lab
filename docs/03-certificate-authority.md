@@ -261,8 +261,8 @@ kube-scheduler.pem
 ## Kubernetes API Server certificate
 
 ```
-10.98.95.11/12/13 -> the 3 k8s control plane hosts
-10.98.95.18 -> the Kube-api load balancer
+192.168.86/12/13 -> the 3 k8s control plane hosts
+192.168.86.18 -> the Kube-api load balancer
 10.98.96.1 -> the Kube-api ("internal") service IP
 ```
 
@@ -290,7 +290,7 @@ cfssl gencert \
   -ca=ca.pem \
   -ca-key=ca-key.pem \
   -config=ca-config.json \
-  -hostname=10.98.95.11,10.98.95.12,10.98.95.13,10.98.95.18,10.98.96.1,127.0.0.1,kubernetes.default \
+  -hostname=192.168.86.11,192.168.86.12,192.168.86.13,192.168.86.18,10.98.96.1,127.0.0.1,kubernetes.default \
   -profile=kubernetes \
   kubernetes-csr.json | cfssljson -bare kubernetes
 }
