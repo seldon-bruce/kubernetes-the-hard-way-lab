@@ -3,8 +3,8 @@
 ## Design
 | Name | IP address | Role |
 | ---|---|---|
-| networker	| 192.168.86.230 | DHCP and DNS server |
-| media	| 192.168.86.231 | NFS server |
+| networker	| 192.168.86.15 | DHCP and DNS server |
+| media	| 192.168.86.16 | NFS server |
 | haproxy1	| 192.168.86.18 | Load Balancer for k8s API |
 | k8s-controller1 | 192.168.86.11 | controller node |
 | k8s-controller2 | 192.168.86.12 | controller node |
