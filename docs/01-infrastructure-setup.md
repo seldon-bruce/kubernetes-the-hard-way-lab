@@ -11,8 +11,8 @@ sudo apt-get install isc-dhcp-server
 --> /etc/dhcp/dhcpd.conf
 
 # common options
-option domain-name "technoff.eu";
-option domain-name-servers 10.98.95.230;
+option domain-name "brucejacobs.org";
+option domain-name-servers 192.168.86.15;
 default-lease-time 300;
 max-lease-time 7200;
 
