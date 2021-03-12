@@ -3,20 +3,20 @@
 ## Design
 | Name | IP address | Role |
 | ---|---|---|
-| networker	| 10.98.95.230 | DHCP and DNS server |
-| media	| 10.98.95.231 | NFS server |
-| haproxy1	| 10.98.95.18 | Load Balancer for k8s API |
-| k8s-controller1 | 10.98.95.11 | controller node |
-| k8s-controller2 | 10.98.95.12 | controller node |
-| k8s-controller3 | 10.98.95.13 | controller node |
-| k8s-worker1 | 10.98.95.21 | worker node |
-| k8s-worker2 | 10.98.95.22 | worker node |
-| k8s-worker3 | 10.98.95.23 | worker node |
+| networker	| 192.168.86.230 | DHCP and DNS server |
+| media	| 192.168.86.231 | NFS server |
+| haproxy1	| 192.168.86.18 | Load Balancer for k8s API |
+| k8s-controller1 | 192.168.86.11 | controller node |
+| k8s-controller2 | 192.168.86.12 | controller node |
+| k8s-controller3 | 192.168.86.13 | controller node |
+| k8s-worker1 | 192.168.86.21 | worker node |
+| k8s-worker2 | 192.168.86.22 | worker node |
+| k8s-worker3 | 192.168.86.23 | worker node |
 
 
 | Network / IP | Description |
 | -------------|-------------|
-| 10.98.95.0/24 | LAN (externally reachable) |
+| 192.168.86.0/24 | LAN (externally reachable) |
 | 10.98.100.0/22 | k8s Pod network |
 | 10.98.96.0/24 | k8s Service network |
 | 10.98.95.18 | k8s API server (external IP - haproxy) |
